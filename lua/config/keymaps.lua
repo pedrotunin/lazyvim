@@ -14,3 +14,14 @@ vim.keymap.set(
   [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
   { desc = "Replace current word" }
 )
+
+--replace current word for another
+vim.keymap.set(
+  "n",
+  "<leader>r",
+  [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
+  { desc = "Replace current word" }
+)
+
+-- format file
+vim.keymap.set("n", "<leader>fmt", vim.lsp.buf.format)
